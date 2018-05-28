@@ -1,0 +1,46 @@
+FROM datadog/agent:latest
+
+# Set http_check URLs environment
+
+ENV NAME=Main_Website
+ENV URL=https://kayak.com
+
+ENV NAME_1=Hotels_Page
+ENV URL_PAGE_1=https://www.kayak.com/hotels
+
+ENV NAME_2=Cars_Page
+ENV URL_PAGE_2=https://www.kayak.com/cars
+
+ENV NAME_3=Packages_Page
+ENV URL_PAGE_3=https://www.kayak.com/packages
+
+ENV NAME_4=Restaurants_Page
+ENV URL_PAGE_4=https://www.kayak.com/restaurants
+
+ENV NAME_5=Media_Alpha_(Search)
+ENV URL_5=http://travel.mediaalpha.com/
+
+ENV NAME_6=A1_r9cdn_(CDN)
+ENV URL_6=http://a1.r9cdn.net/
+
+ENV NAME_7=Openresty_krxd_(CDN)
+ENV URL_7=http://cdn.krxd.net/
+
+ENV NAME_8=CDN77_(CDN)
+ENV URL_8=http://load77.exelator.com/
+
+ENV NAME_9=Doubleclick_Search_(DBM)
+ENV URL_9=http://cm.g.doubleclick.net/
+
+ENV NAME_10=Airpr_(Analytics)
+ENV URL_10=http://px.airpr.com/
+
+ENV NAME_11=Live_Chat_(CDN)
+ENV URL_11=http://cdn.livechatinc.com/
+
+ENV NAME_12=Cloudfront_(CDN)
+ENV URL_12=http://d2s3bizpgknsvz.cloudfront.net/
+
+COPY process.sh /
+COPY http_check.yaml /etc/datadog-agent/conf.d/http_check.d/template.yaml
+RUN chmod 755 process.sh && ./process.sh

@@ -1,0 +1,43 @@
+init_config:
+
+instances:
+    # You can use services like http://requestmap.webperf.tools/ to find the url requests
+    # being made by a website in the background.
+  - name: $NAME
+    url: $URL
+
+  - name: $NAME_1
+    url: $URL_PAGE_1
+
+  - name: $NAME_2
+    url: $URL_PAGE_2
+
+  - name: $NAME_3
+    url: $URL_PAGE_3
+
+  - name: $NAME_4
+    url: $URL_PAGE_4
+
+  - name: $NAME_5
+    url: $URL_5
+
+  - name: $NAME_6
+    url: $URL_6
+
+  - name: $NAME_7
+    url: $URL_7
+
+  - name: $NAME_8
+    url: $URL_8
+
+  - name: $URL_9
+    url: $URL_9
+
+  - name: $URL_10
+    url: $URL_10
+
+  - name: $NAME_11
+    url: $URL_11
+
+  - name: $NAME_12
+    url: $URL_12

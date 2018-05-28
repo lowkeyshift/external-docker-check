@@ -1,0 +1,12 @@
+init_config:
+    default_timeout: 5
+
+instances:
+    #Add some urls for the pingtime script to check for errors,status, and events
+    -  url: 
+    -  url:
+    -  url:
+    -  url:
+    -  url:
+    -  url:
+    -  url:
